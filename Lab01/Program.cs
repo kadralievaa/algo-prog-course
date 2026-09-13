@@ -84,5 +84,17 @@ Console.WriteLine($"Учебное заведение: {CollegeName}");
 Console.WriteLine($"Цена без НДС: {productPrice}, с НДС: ({VatRate:P0}):{priceWithVat}");
 
 
+Console.WriteLine();
+Console.WriteLine("Бюджет студента");
 
+int scholarship = 0;
+int monthlyExpenses = 14200;
+const int MonthsInSemester = 4;
 
+int remainingPerMonth = scholarship - monthlyExpenses;
+int remainingPerSemester = remainingPerMonth * MonthsInSemester;
+
+Console.WriteLine($"Стипендия: {scholarship} руб.");
+Console.WriteLine($"Расходы в месяц: {monthlyExpenses} руб.");
+Console.WriteLine($"Остаток за месяц: {remainingPerMonth} руб.");
+Console.WriteLine($"Остаток за семестр ({MonthsInSemester} мес): {remainingPerSemester} руб.");

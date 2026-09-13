@@ -81,8 +81,7 @@ double productPrice = 1000;
 double priceWithVat = productPrice * (1 + VatRate);
 //вывод информации в консоль
 Console.WriteLine($"Учебное заведение: {CollegeName}");
-Console.WriteLine($"Цена без НДС: {productPrice}, с НДС: ({VatRate:P0}):{priceWithVat}");
-
+Console.WriteLine($"Цена без НДС: {productPrice}, с НДС ({VatRate:P0}): {priceWithVat}");
 
 Console.WriteLine();
 Console.WriteLine("Бюджет студента");
@@ -98,3 +97,13 @@ Console.WriteLine($"Стипендия: {scholarship} руб.");
 Console.WriteLine($"Расходы в месяц: {monthlyExpenses} руб.");
 Console.WriteLine($"Остаток за месяц: {remainingPerMonth} руб.");
 Console.WriteLine($"Остаток за семестр ({MonthsInSemester} мес): {remainingPerSemester} руб.");
+
+Console.WriteLine();
+
+int totalMinutes = 500;
+int minutesPerLesson = 45;
+
+int fullLessons = totalMinutes / minutesPerLesson;
+int remainingMinutes = totalMinutes % minutesPerLesson;
+ 
+ Console.WriteLine($"{totalMinutes} минут = {fullLessons} полных занятий + {remainingMinutes} минут");
